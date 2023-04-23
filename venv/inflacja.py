@@ -32,7 +32,7 @@ inflation = 0.5
 amount = start_amount - (monthly_payment + (monthly_payment * loan_interest) * inflation)
 #less logika
 #less -> początkowa kwota amount
-less= start_amount - amount
+less = start_amount - amount
 
 print(message.format(month=month, amount=amount, less=less))
 
