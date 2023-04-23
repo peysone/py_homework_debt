@@ -14,7 +14,7 @@ i kwota raty były pobierane ze standardowego wejścia (terminal).
 
 """
 username = input("Witaj! Jest to aplikacja obliczająca wartość zadłużenia kredytowego. " \
-                "Podaj proszę swoje imię by rozpocząć:   ")
+                 "Podaj proszę swoje imię by rozpocząć:   ")
 print(f"Drogi/a {username}! \n Podaj proszę wysokość początkową kredytu, oprocentowanie kredytu oraz kwotę raty.")
 
 message = ("{month} \n Twoja pozostała kwota kredytu w miesiącu {month} to {amount}, \n to {less} mniej niż w poprzednim miesiącu.")
@@ -30,9 +30,14 @@ inflation = 0.5
 #amount logika
 # amount -> wysokość pożyczki minus (m-czna rata  + oprocentowanie )+ inflacja
 amount = start_amount - (monthly_payment + (monthly_payment * loan_interest) * inflation)
-less= amount - start_amount
+#less logika
+#less -> początkowa kwota amount
+less= start_amount - amount
 
 print(message.format(month=month, amount=amount, less=less))
+
+
+
 
 
 
