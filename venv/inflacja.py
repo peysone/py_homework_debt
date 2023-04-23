@@ -26,10 +26,10 @@ monthly_payment = float(input('Teraz podaj kwotę raty miesięcznej, \n na tej p
 
 # Styczeń
 month = "styczeń"
-inflation = 0.02
+inflation = 0.5
 #amount logika
-# 
-amount =
+# amount -> wysokość pożyczki minus (m-czna rata  + oprocentowanie )+ inflacja
+amount = start_amount - (monthly_payment + (monthly_payment * loan_interest) * inflation)
 less= amount - start_amount
 
 print(message.format(month=month, amount=amount, less=less))
