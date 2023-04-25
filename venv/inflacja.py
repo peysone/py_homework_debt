@@ -42,8 +42,7 @@ inflation = float(0.00)
 #amount1 logika
 # amount1 -> amount minus (m-czna rata  + oprocentowanie )x inflacja
 amount1 = amount - (monthly_payment + (monthly_payment * loan_interest) * inflation)
-#less logika
-#less -> wynik styczniowy (amount) - amount 1
+
 less1 = float(start_amount - amount1)
 
 print(message.format(month=month, amount=amount1, less=less1))
@@ -51,36 +50,27 @@ print(message.format(month=month, amount=amount1, less=less1))
 #Marzec 2 %
 month = "marzec"
 inflation = float(0.02)
-#amount2 logika
-# amount2 -> amount1 minus (m-czna rata  + oprocentowanie )x inflacja
-amount2 = float(amount1 - (monthly_payment + (inflation * loan_interest)))
-#less logika
-#less -> początkowa kwota amount
-less2 = float(amount2 - less1)
+amount2 = amount1 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less2 = float(start_amount - amount2)
 
 print(message.format(month=month, amount=amount2, less=less2))
 
 #kwiecień 1%
 month = "kwiecień"
 inflation = float(0.01)
-#amount2 logika
-# amount2 -> amount1 minus (m-czna rata  + oprocentowanie )x inflacja
-amount3 = float(amount2 - (monthly_payment + (inflation * loan_interest)))
-#less logika
-#less -> początkowa kwota amount
-less3 = float(amount2 - amount3)
+amount3 = amount2 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less3 = float(start_amount - amount3)
 
 print(message.format(month=month, amount=amount3, less=less3))
 
 #maj 2 %
 month = "maj"
 inflation = float(0.02)
-#amount2 logika
-# amount2 -> amount1 minus (m-czna rata  + oprocentowanie )x inflacja
-amount4 = float(amount3 - (monthly_payment + (inflation * loan_interest)))
-#less logika
-#less -> początkowa kwota amount
-less4 = float(amount3 - amount4)
+amount4 = amount3 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less4 = float(start_amount - amount4)
 
 print(message.format(month=month, amount=amount4, less=less4))
 
@@ -88,11 +78,69 @@ print(message.format(month=month, amount=amount4, less=less4))
 
 month = "czerwiec"
 inflation = float(0.02)
-#amount2 logika
-# amount2 -> amount1 minus (m-czna rata  + oprocentowanie )x inflacja
-amount5 = float(amount4 - (monthly_payment + (inflation * loan_interest)))
-#less logika
-#less -> początkowa kwota amount
-less5 = float(amount4 - amount5)
+amount5 = amount4 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less5 = float(start_amount - amount5)
 
 print(message.format(month=month, amount=amount5, less=less5))
+
+# lipiec 2%
+
+month = "lipiec"
+inflation = float(0.02)
+amount6 = amount5 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less6 = float(start_amount - amount6)
+
+print(message.format(month=month, amount=amount6, less=less6))
+
+# sierpień 2%
+month = "sierpień"
+inflation = float(0.02)
+amount7 = amount6 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less7 = float(start_amount - amount7)
+
+print(message.format(month=month, amount=amount7, less=less7))
+
+# wrzesień 2%
+
+month = "wrzesień"
+inflation = float(0.02)
+amount8 = amount7 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less8 = float(start_amount - amount8)
+
+print(message.format(month=month, amount=amount8, less=less8))
+
+# październik 1%
+
+month = "październik"
+inflation = float(0.01)
+amount9 = amount8 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less9 = float(start_amount - amount9)
+
+print(message.format(month=month, amount=amount9, less=less9))
+
+# listopad 2%
+
+month = "listopad"
+inflation = float(0.02)
+amount10 = amount9 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less10 = float(start_amount - amount10)
+
+print(message.format(month=month, amount=amount10, less=less10))
+
+# grudzień 0%
+
+month = "grudzień"
+inflation = float(0.00)
+amount11 = amount10 - (monthly_payment + (monthly_payment * loan_interest) * inflation)
+
+less11 = float(start_amount - amount11)
+
+print(message.format(month=month, amount=amount11, less=less11))
+print()
+print("ROK 2023")
